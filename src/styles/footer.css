@@ -1,0 +1,49 @@
+.footer-position {
+  margin-top: auto;
+}
+
+.footer-padding {
+  padding: 52px 112px;
+}
+
+.logo-position {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.text-pos {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-border {
+  border: 1px solid #eaecf0;
+  position: absolute;
+  top: 0;
+  left: 112px;
+  right: 112px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-padding {
+    padding: 32px 16px;
+  }
+
+  .logo-position {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .text-pos {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .footer-border {
+    border: 1px solid #eaecf0;
+    position: absolute;
+    top: 0;
+    left: 16px;
+    right: 16px;
+  }
+}

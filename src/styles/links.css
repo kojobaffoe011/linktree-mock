@@ -1,0 +1,15 @@
+.links-padding {
+  padding-left: 144px;
+  padding-right: 144px;
+}
+
+.hover:hover {
+  background-color: #d0d5dd;
+}
+
+@media screen and (max-width: 768px) {
+  .links-padding {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
