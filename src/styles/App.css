@@ -17,6 +17,13 @@ a {
 .bg-gray {
   background-color: #eaecf0;
 }
+.gray-alt {
+  color: #667085;
+}
+
+.bg-gray-alt {
+  background-color: #667085;
+}
 
 .black {
   color: #101828;
@@ -24,4 +31,12 @@ a {
 
 .bg-black {
   background-color: #101828;
+}
+
+.regular {
+  font-family: regular;
+}
+
+.bold {
+  font-family: bold;
 }

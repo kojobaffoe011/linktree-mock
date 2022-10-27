@@ -15,7 +15,7 @@ const Link = (props) => {
         borderRadius: "8px",
       }}
     >
-      <p className="black">{props.text}</p>
+      <p className="black regular">{props.text}</p>
     </Flex>
   );
 };

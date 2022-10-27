@@ -2,8 +2,44 @@
   padding: 64px 144px 56px 144px;
 }
 
+.img {
+  background: url("../assets/images/profile-img.svg") no-repeat;
+}
+
+.img:hover {
+  background: url("../assets/images/profile-img-alt.svg") no-repeat;
+}
+
+.share-pos {
+  position: absolute;
+  top: 44px;
+  right: 352px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 @media screen and (max-width: 768px) {
   .header-padding {
     padding: 64px 16px 32px 16px;
+  }
+
+  .share-pos {
+    position: absolute;
+    top: 44px;
+    right: 16px;
+  }
+
+  .hide {
+    display: block;
+  }
+
+  .show {
+    display: none;
   }
 }

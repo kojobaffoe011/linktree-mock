@@ -20,7 +20,7 @@ const Footer = () => {
         </GridItem>
         <GridItem span={8} md={12} className="">
           <div className="text-pos">
-            <p>HNG Internship 9 Frontend Task</p>
+            <p className="gray-alt">HNG Internship 9 Frontend Task</p>
           </div>
         </GridItem>
         <GridItem span={2} md={12} className="">
