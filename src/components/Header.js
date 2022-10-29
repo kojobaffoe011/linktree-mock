@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/header.css";
 import Flex from "./layout/Flex";
 import share from "../assets/icons/share.svg";
+import share_alt from "../assets/icons/share-hover.svg";
 import dots from "../assets/icons/dots.svg";
 
 const Header = () => {
@@ -9,7 +10,10 @@ const Header = () => {
     <div className="" style={{ position: "relative" }}>
       <Flex className="header-padding" jc="center">
         <Flex stack={true} spacing={24}>
-          <div className="img" style={{ width: "100%", height: "88px" }} />
+          <div
+            className="profile-img"
+            style={{ width: "100%", height: "88px" }}
+          />
 
           <p id="twitter" className="bold">
             Annette Black
@@ -19,9 +23,10 @@ const Header = () => {
           </p>
         </Flex>
       </Flex>
-      <div className="share-pos show">
-        <img src={share} alt="" />
-      </div>
+      <Flex className="figure show share-pos  " jc="flex-end">
+        <img src={share} className="image-main" />
+        <img src={share_alt} className="image-hover " />
+      </Flex>
       <div className="share-pos hide">
         <img src={dots} alt="" />
       </div>

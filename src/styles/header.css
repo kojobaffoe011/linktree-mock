@@ -2,12 +2,31 @@
   padding: 64px 144px 56px 144px;
 }
 
-.img {
+.profile-img {
   background: url("../assets/images/profile-img.svg") no-repeat;
 }
 
-.img:hover {
+.profile-img:hover {
   background: url("../assets/images/profile-img-alt.svg") no-repeat;
+}
+
+/*  Rollover image styles  */
+.figure {
+  position: relative;
+  max-width: 100%;
+}
+
+.figure:hover img.image-main {
+  opacity: 0;
+}
+.figure img.image-hover {
+  position: absolute;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.figure:hover img.image-hover {
+  opacity: 1;
 }
 
 .share-pos {
