@@ -38,13 +38,21 @@ const Links = () => {
         >
           <Link text={"Zuri Books"} />
         </a>
-        <a href="https://google.com" target="_blank">
+        <a
+          href="https://books.zuri.team/python-for-beginners?ref_id=buff"
+          target="_blank"
+          id="book__python"
+        >
           <Link text={"Python Books"} />
         </a>
-        <a href="https://google.com" target="_blank">
+        <a href="https://background.zuri.team" target="_blank" id="pitch">
           <Link text={"Background Check for Coders"} />
         </a>
-        <a href="https://google.com" target="_blank">
+        <a
+          href="https://books.zuri.team/design-rules"
+          target="_blank"
+          id="book__design"
+        >
           <Link text={"Design Books"} />
         </a>
 

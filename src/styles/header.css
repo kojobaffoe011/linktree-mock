@@ -61,4 +61,8 @@
   .show {
     display: none;
   }
+
+  .figure img.image-hover {
+    display: none;
+  }
 }

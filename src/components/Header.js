@@ -3,17 +3,19 @@ import "../styles/header.css";
 import Flex from "./layout/Flex";
 import share from "../assets/icons/share.svg";
 import share_alt from "../assets/icons/share-hover.svg";
+import profile_img from "../assets/images/profile-img.svg";
+import profile_alt from "../assets/images/profile-img-alt.svg";
 import dots from "../assets/icons/dots.svg";
 
 const Header = () => {
   return (
     <div className="" style={{ position: "relative" }}>
       <Flex className="header-padding" jc="center">
-        <Flex stack={true} spacing={24}>
-          <div
-            className="profile-img"
-            style={{ width: "100%", height: "88px" }}
-          />
+        <Flex stack={true} spacing={24} className="">
+          <Flex jc="center" className="figure">
+            <img src={profile_img} alt="" className="image-main" />
+            <img src={profile_alt} alt="" className="image-hover" />
+          </Flex>
 
           <p id="twitter" className="bold">
             Annette Black
