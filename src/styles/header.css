@@ -25,7 +25,19 @@
   opacity: 0;
   transition: opacity 0.2s;
 }
+
 .figure:hover img.image-hover {
+  opacity: 1;
+}
+
+.figure img.image-hov {
+  position: absolute;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.figure:hover img.image-hov {
   opacity: 1;
 }
 

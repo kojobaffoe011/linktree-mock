@@ -14,7 +14,7 @@ const Header = () => {
         <Flex stack={true} spacing={24} className="">
           <Flex jc="center" className="figure">
             <img src={profile_img} alt="" className="image-main" />
-            <img src={profile_alt} alt="" className="image-hover" />
+            <img src={profile_alt} alt="" className="image-hov" />
           </Flex>
 
           <p id="twitter" className="bold">
