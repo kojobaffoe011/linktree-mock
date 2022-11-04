@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import Flex from "./layout/Flex";
-import Links from "./Links";
+// import Links from "../pages/Links";
 
 const Layout = (props) => {
   return (
@@ -13,8 +13,9 @@ const Layout = (props) => {
         flexDirection: "column",
       }}
     >
-      <Header />
-      <Links />
+      {/* <Header /> */}
+      <Flex stack={true}>{props.children}</Flex>
+      {/* <Links /> */}
       <Footer />
     </div>
   );
