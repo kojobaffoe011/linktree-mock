@@ -30,6 +30,7 @@ const ContactPage = () => {
     setTimeout(() => {
       setIsAlertVisible(false);
     }, 5000);
+    setFormValues({ firstName: "", lastName: "", email: "", message: "" });
   };
 
   useEffect(() => {
