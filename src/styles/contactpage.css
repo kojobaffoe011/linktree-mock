@@ -1,0 +1,8 @@
+.page-padding {
+  padding: 156px 360px;
+}
+@media screen and (max-width: 768px) {
+  .page-padding {
+    padding: 64px 16px;
+  }
+}
