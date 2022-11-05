@@ -1,6 +1,14 @@
 .page-padding {
   padding: 156px 360px;
 }
+
+.error {
+  color: #f83f23;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
 @media screen and (max-width: 768px) {
   .page-padding {
     padding: 64px 16px;

@@ -18,7 +18,7 @@ const Header = () => {
           </Flex>
 
           <p id="twitter" className="bold">
-            Annette Black
+            Kojo Baffoe
           </p>
           <p id="slack" style={{ display: "none" }}>
             Clement Ankomah
