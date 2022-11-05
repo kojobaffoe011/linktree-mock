@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Flex from "../components/layout/Flex";
 import Grid, { GridItem } from "../components/layout/Grid";
 import "../styles/contactpage.css";
@@ -13,6 +13,8 @@ const ContactPage = () => {
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
+  const [isAlertVisible, setIsAlertVisible] = useState(false);
+  const [change, setChange] = useState(true);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,10 +26,13 @@ const ContactPage = () => {
     e.preventDefault();
     setFormErrors(validate(formValues));
     setIsSubmit(true);
+    setIsAlertVisible(true);
+    setTimeout(() => {
+      setIsAlertVisible(false);
+    }, 5000);
   };
 
   useEffect(() => {
-    console.log(formErrors);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       console.log(formValues);
     }
@@ -44,6 +49,8 @@ const ContactPage = () => {
     }
     if (!values.email) {
       errors.email = "Email is required!";
+    } else if (!regex.test(values.email)) {
+      errors.email = "Email is invalid";
     }
     if (!values.message) {
       errors.message = "Please enter a message";
@@ -51,10 +58,35 @@ const ContactPage = () => {
     return errors;
   };
 
+  const handleButtonDisability = () => {
+    setChange(!change);
+  };
+
   return (
-    <div className="page-padding">
-      <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
-      <Flex stack={true} spacing={48}>
+    <div className="page-padding " style={{ position: "relative" }}>
+      {Object.keys(formErrors).length === 0 && isSubmit
+        ? isAlertVisible && (
+            <Flex className="" jc="center">
+              <div
+                className=""
+                style={{
+                  padding: "10px",
+                  borderRadius: "8px",
+                  marginTop: "auto",
+                  backgroundColor: "#1570ef",
+                  position: "fixed",
+                  top: "5px",
+                  transition: "0s 4s",
+                }}
+              >
+                <p className="white bold smallest">
+                  Message sent successfully!
+                </p>
+              </div>
+            </Flex>
+          )
+        : null}
+      <Flex stack={true} spacing={48} className="">
         <Flex stack={true} spacing={16}>
           <h1 className="">Contact Me</h1>
           <p className="small gray-600">
@@ -78,8 +110,8 @@ const ContactPage = () => {
                     value={formValues.firstName}
                     onChange={handleChange}
                   />
+                  <p className="error">{formErrors.firstName}</p>
                 </Flex>
-                <p className="error">{formErrors.firstName}</p>
               </GridItem>
               <GridItem span={6} md={12}>
                 <Flex stack={true} spacing={6}>
@@ -94,8 +126,8 @@ const ContactPage = () => {
                     value={formValues.lastName}
                     onChange={handleChange}
                   />
+                  <p className="error">{formErrors.lastName}</p>
                 </Flex>
-                <p className="error">{formErrors.lastName}</p>
               </GridItem>
             </Grid>
             <Flex stack={true} spacing={6}>
@@ -130,7 +162,8 @@ const ContactPage = () => {
             <Flex stack={true} spacing={32}>
               <Flex className="" spacing={12}>
                 <input
-                  className=""
+                  className="  checkbox"
+                  onChange={handleButtonDisability}
                   type="checkbox"
                   style={{
                     margin: 0,
@@ -140,12 +173,15 @@ const ContactPage = () => {
                     border: "1px solid #d0d5dd",
                   }}
                 />
-                <p className="gray-600 ">
-                  You agree to providing your data to Kojo Baffoe to who may
-                  contact you.
-                </p>
+
+                <label className="">
+                  <p className="gray-600 ">
+                    You agree to providing your data to Kojo Baffoe who may
+                    contact you.
+                  </p>
+                </label>
               </Flex>
-              <button>
+              <button disabled={change}>
                 <p className="white bold smaller">Send Message</p>
               </button>
             </Flex>
