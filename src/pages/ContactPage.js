@@ -182,7 +182,7 @@ const ContactPage = () => {
                   </p>
                 </label>
               </Flex>
-              <button disabled={change}>
+              <button disabled={change} id="btn__submit">
                 <p className="white bold smaller">Send Message</p>
               </button>
             </Flex>
