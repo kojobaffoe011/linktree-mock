@@ -166,7 +166,7 @@ const ContactPage = () => {
             </Flex>
 
             <Flex stack={true} spacing={32}>
-              <Flex className="" spacing={12}>
+              <Flex className="" spacing={12} className="checkbox-container">
                 <input
                   className="checkbox"
                   name="checkbox"
