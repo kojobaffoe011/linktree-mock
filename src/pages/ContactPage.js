@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router";
 import Flex from "../components/layout/Flex";
 import Grid, { GridItem } from "../components/layout/Grid";
 import "../styles/contactpage.css";
@@ -9,6 +10,7 @@ const ContactPage = () => {
     lastName: "",
     email: "",
     message: "",
+    checkbox: "",
   };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
@@ -18,7 +20,7 @@ const ContactPage = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormValues({ ...formValues, [name]: value });
+    setFormValues({ ...formValues, [name]: value.trim() });
     console.log(formValues);
   };
 
@@ -163,7 +165,8 @@ const ContactPage = () => {
             <Flex stack={true} spacing={32}>
               <Flex className="" spacing={12}>
                 <input
-                  className="  checkbox"
+                  className="checkbox"
+                  name="checkbox"
                   onChange={handleButtonDisability}
                   type="checkbox"
                   style={{
