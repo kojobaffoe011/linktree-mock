@@ -69,7 +69,7 @@ const Links = () => {
         >
           <IndividualLink text={"Design Books"} />
         </a>
-        <Link to="/contact">
+        <Link to="/contact" id="contact">
           <IndividualLink text={"Contact Me"} />
         </Link>
 
